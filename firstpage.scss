@@ -1,0 +1,54 @@
+// Colors
+$primary-bg-color: #333;
+$text-color: white;
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    background-color: $primary-bg-color;
+    color: $text-color;
+    padding: 10px;
+
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+    }
+
+    li {
+        margin-right: 20px;
+    }
+
+    a {
+        text-decoration: none;
+        color: $text-color;
+        font-weight: bold;
+    }
+}
+
+.hero {
+    position: relative;
+    height: 500px; // Adjust the height according to your design
+    overflow: hidden;
+
+    &-image {
+        width: 100%;
+        height: 100%;
+        background: url('hero.jpg') center/cover no-repeat; // Replace with your 360-degree image
+        // If using an image slider, adjust styles accordingly
+    }
+
+    &-logo {
+        position: absolute;
+        top: 100px; // Adjust the position according to your design
+        left:45px; // Adjust the position according to your design
+        max-width: 350px; // Adjust the size according to your design
+    }
+}
+
+
