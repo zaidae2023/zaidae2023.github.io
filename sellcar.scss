@@ -1,0 +1,196 @@
+/* Color variables */
+$primary-background-color: #f5f5f5;
+$form-max-width: 600px;
+$form-padding: 40px 20px;
+$form-input-padding: 10px;
+$button-background-color: #ff6600;
+$button-hover-background-color: darken($button-background-color, 10%);
+$primary-color: #2c3e50;
+
+
+body {
+    background-color: $primary-color;
+}
+
+/* Style the Sell Your Car form */
+#sell-your-car {
+    background-color: $primary-background-color;
+    padding: $form-padding;
+    text-align: center;
+
+    h2 {
+        font-size: 2em;
+        margin-bottom: 20px;
+    }
+
+    form {
+        max-width: $form-max-width;
+        margin: 0 auto;
+        text-align: left;
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input,
+        select {
+            width: 100%;
+            padding: $form-input-padding;
+            margin-bottom: 20px;
+            box-sizing: border-box;
+        }
+
+        button {
+            display: inline-block;
+            padding: $form-input-padding * 2 $form-input-padding * 4;
+            font-size: 1em;
+            text-decoration: none;
+            background-color: $button-background-color;
+            color: #fff;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: $button-hover-background-color;
+        }
+    }
+}
+
+/* Add responsive styles */
+@media (max-width: 768px) {
+    form {
+        padding: 0 20px;
+    }
+}
+
+
+
+$primary-color: $primary-color;
+$accent-color: #ff6600;
+$text-color: #fff;
+$background-color: #2c3e50;
+$hero-background: url('hero1.jpg') center/cover no-repeat;
+
+// Add other color variables as needed
+
+/* Style the header and navigation */
+header {
+    background-color: $primary-color;
+    color: $text-color;
+    padding: 10px;
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#logo {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: $text-color;
+}
+
+.toggle-bar {
+    cursor: pointer;
+    display: none;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+/* Add responsive styles */
+@media (max-width: 480px) {
+    .toggle-bar {
+        display: block;
+    }
+
+    nav {
+        display: none;
+        flex-direction: column;
+        position: static;
+        top: 60px; /* Adjust the top position as needed */
+        left: 0;
+        width: 100%;
+        background-color: #333;
+    }
+
+    nav.show {
+        display: flex;
+    }
+}
+
+.search-bar {
+    flex: 1;
+    margin: 0 20px;
+    max-width: 300px;
+    position: relative;
+
+    input {
+        width: 100%;
+        padding: 8px;
+        border: none;
+        border-radius: 5px;
+    }
+
+    button {
+        position: absolute;
+        right: -16px;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: $accent-color;
+        color: $text-color;
+        border: none;
+        border-radius: 5px;
+        padding: 8px;
+        cursor: pointer;
+    }
+}
+
+
+
+// Media query for tablet
+@media (min-width: 768px) {
+    header {
+        nav {
+            .search-bar {
+                max-width: 400px;
+            }
+        }
+    }
+}
+
+// Media query for desktop
+@media (min-width: 1024px) {
+    header {
+        padding: 20px; // Add more padding for better spacing on larger screens
+
+        nav {
+            .search-bar {
+                max-width: 500px;
+            }
+        }
+    }
+}

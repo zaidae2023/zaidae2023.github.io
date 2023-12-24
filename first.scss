@@ -1,0 +1,456 @@
+// Color variables
+$primary-color: #2c3e50;
+$accent-color: #ff6600;
+$text-color: #fff;
+$background-color: #2c3e50;
+$hero-background: url('hero1.jpg') center/cover no-repeat;
+$main-background:#ff6600;
+
+
+body {
+    background-color:$background-color;
+}
+
+
+
+
+
+/* Style the header and navigation */
+header {
+    background-color: $primary-color;
+    color: $text-color;
+    padding: 10px;
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#logo {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: $text-color;
+}
+
+.toggle-bar {
+    cursor: pointer;
+    display: none;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+/* Add responsive styles */
+@media (max-width: 480px) {
+    .toggle-bar {
+        display: block;
+    }
+
+    nav {
+        display: none;
+        flex-direction: column;
+        position: static;
+        top: 60px; /* Adjust the top position as needed */
+        left: 0;
+        width: 100%;
+        background-color: #333;
+    }
+
+    nav.show {
+        display: flex;
+    }
+}
+
+
+
+
+
+/* Style the hero image */
+#hero {
+    background: $hero-background;
+    color: $text-color;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.hero-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#hero h1 {
+    font-size: 2.5em;
+    color: $text-color;
+    margin-bottom: 10px;
+    /* Text animation */
+    animation: fadeInUp 1s ease-in-out;
+}
+
+#hero p {
+    font-size: 1.2em;
+    color: $text-color;
+    margin-bottom: 20px;
+    /* Text animation */
+    animation: fadeInUp 1s ease-in-out 0.5s;
+}
+
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+.cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1.1em;
+    text-decoration: none;
+    background-color: $accent-color;
+    color: $text-color;
+    border-radius: 5px;
+}
+
+.cta-button:hover {
+    background-color: darken($accent-color, 10%);
+}
+
+
+/* Add responsive styles */
+@media (max-width: 768px) {
+    #hero {
+        padding: 80px 20px;
+    }
+
+    #hero h1 {
+        font-size: 2em;
+    }
+
+    #hero p {
+        font-size: 1em;
+    }
+
+    .cta-button {
+        font-size: 1em;
+        padding: 8px 16px;
+    }
+}
+
+@media (max-width: 600px) {
+    #hero {
+        padding: 60px 20px;
+    }
+
+    #hero h1 {
+        font-size: 1.8em;
+    }
+
+    #hero p {
+        font-size: 1em;
+        margin-bottom: 15px;
+    }
+
+    .cta-button {
+        font-size: 0.9em;
+        padding: 8px 16px;
+    }
+}
+
+
+/* Your existing code */
+
+/* Style the Featured Cars section */
+#featured-cars {
+    background-color: #f5f5f5;
+    padding: 40px 20px;
+    text-align: center;
+
+    h2 {
+        font-size: 2em;
+        margin-bottom: 20px;
+    }
+
+    .car-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        gap: 20px;
+    }
+
+    .car {
+        position: relative;
+        overflow: hidden;
+        width: 300px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        transition: transform 0.3s ease-in-out;
+
+        img {
+            width: 100%;
+            height: auto;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        &:hover {
+            transform: scale(1.1);
+
+            img {
+                transform: scale(1.1);
+            }
+
+            .car-info {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .car-info {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 15px;
+            text-align: left;
+            background-color: rgba(255, 255, 255, 0.9);
+            opacity: 0;
+            transform: translateY(100%);
+            transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+
+            h3 {
+                font-size: 1.2em;
+                margin-bottom: 5px;
+            }
+
+            p {
+                font-size: 1em;
+                margin-bottom: 3px;
+            }
+
+            .cta-button {
+                display: block;
+                margin-top: 10px;
+                padding: 10px;
+                font-size: 1em;
+                text-align: center;
+                text-decoration: none;
+                background-color: #ff6600;
+                color: #fff;
+                border-radius: 5px;
+                transition: background-color 0.3s ease-in-out;
+            }
+
+            .cta-button:hover {
+                background-color: darken(#ff6600, 10%);
+            }
+        }
+    }
+}
+
+/* Add responsive styles */
+@media (max-width: 768px) {
+    
+
+    .car {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+
+/* Your existing styles */
+
+.phone-call-logo {
+    position: fixed;
+    bottom: -35px;
+    right: -25px;
+    cursor: pointer;
+}
+
+.phone-number {
+    display: none;
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Add responsive styles */
+@media (max-width: 768px) {
+    .phone-call-logo {
+        bottom: -35px;
+        right: -30px;
+    }
+
+    .phone-number {
+        bottom: 60px;
+        right: 10px;
+    }
+}
+
+@media (max-width: 600px) {
+    .phone-call-logo {
+        bottom: -30px;
+        right: -30px;
+        
+    }
+
+    .phone-number {
+        bottom: 60px;
+        right: 10px;
+    }
+}
+
+/* Add more media queries as needed */
+
+
+$primary-color: #ff6600;
+$background-color: #f4f4f4;
+$form-background-color: #fff;
+$shadow-color: rgba(0, 0, 0, 0.1);
+
+#car-evaluation-form {
+  max-width: 600px;
+  margin: 50px auto;
+  background-color: $form-background-color;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px $shadow-color;
+
+  h2 {
+    text-align: center;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  label {
+    margin-top: 10px;
+  }
+
+  input, select {
+    padding: 10px;
+    margin: 5px 0 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    width: 100%;
+  }
+
+  button {
+    background-color: $primary-color;
+    color: #fff;
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: darken($primary-color, 10%);
+    }
+  }
+
+  #valuation-result {
+    margin-top: 20px;
+
+    h3 {
+      color: $primary-color;
+    }
+  }
+
+  @media (max-width: 768px) {
+    margin: 20px;
+  }
+}
+
+.valuation-title {
+    text-align: center;
+    color:$text-color ;
+}
+
+
+
+.search-bar {
+    flex: 1;
+    margin: 0 20px;
+    max-width: 300px;
+    position: relative;
+
+    input {
+        width: 100%;
+        padding: 8px;
+        border: none;
+        border-radius: 5px;
+    }
+
+    button {
+        position: absolute;
+        right: -16px;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: $accent-color;
+        color: $text-color;
+        border: none;
+        border-radius: 5px;
+        padding: 8px;
+        cursor: pointer;
+    }
+}
+
+
+
+// Media query for tablet
+@media (min-width: 768px) {
+    header {
+        nav {
+            .search-bar {
+                max-width: 400px;
+            }
+        }
+    }
+}
+
+// Media query for desktop
+@media (min-width: 1024px) {
+    header {
+        padding: 20px; // Add more padding for better spacing on larger screens
+
+        nav {
+            .search-bar {
+                max-width: 500px;
+            }
+        }
+    }
+}

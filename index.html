@@ -4,29 +4,144 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="firstpage.css">
+    <link rel="stylesheet" href="first.css">
 </head>
 <body>
 
-        <!-- Navigation Menu -->
+    <header>
+
+        <div class="toggle-bar" onclick="toggleNav()">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+
+
+
+
+
         <nav>
+            <div id="logo">
+                <img src="logo.png" alt="Logo" width="75px" height="60px">
+            </div>
+            <div class="search-bar">
+                <input type="text" placeholder="Search...">
+                <button type="button">Search</button>
+            </div>
+
             <ul>
                 <li><a href="#">Home</a></li>
-                <li><a href="#">Cars for Sale</a></li>
-                <li><a href="#">Sell Your Car</a></li>
-                <li><a href="#">About Us</a></li>
-                <!-- Add more menu items as needed -->
+                <li><a href="#">About</a></li>
+                <li><a href="sellcar.html">Sell Your Car</a></li>
+                <!-- Add more navigation links as needed -->
             </ul>
         </nav>
-    
-        <!-- Hero Section with 360-degree Image -->
-        <section class="hero">
-            <div class="hero-image">
-                <!-- Insert your 360-degree image or use an image slider here -->
-                <!-- Example: <img src="hero360.jpg" alt="360-degree car image"> -->
+    </header>
+
+    <section id="hero">
+        <div class="hero-content">
+            <h1>Welcome to CarMart</h1>
+            <p>Find the perfect car for you.</p>
+            <a href="#" class="cta-button">Browse Cars</a>
+        </div>
+    </section>
+
+
+    <section id="featured-cars">
+        <h2>Featured Cars</h2>
+        <div class="car-container">
+            <div class="car">
+                <img src="feature1.jpg" alt="Car 1">
+                <div class="car-info">
+                    <h3>Car Model 1</h3>
+                    <p>Year: 2022</p>
+                    <p>Price: $30,000</p>
+                    <button class="cta-button">View Details</button>
+                </div>
             </div>
-            <img src="logo.png" alt="Your Website Logo" class="hero-logo">
-        </section>
+            <div class="car">
+                <img src="feature2.jpg" alt="Car 2">
+                <div class="car-info">
+                    <h3>Car Model 2</h3>
+                    <p>Year: 2023</p>
+                    <p>Price: $35,000</p>
+                    <button class="cta-button">View Details</button>
+                </div>
+
+            </div>
+            <div class="car">
+                <img src="feature3.jpg" alt="Car 2">
+                <div class="car-info">
+                    <h3>Car Model 2</h3>
+                    <p>Year: 2023</p>
+                    <p>Price: $35,000</p>
+                    <button class="cta-button">View Details</button>
+                </div>
+
+            <!-- Add more car entries as needed -->
+        </div>
+
+        <div class="car">
+            <img src="feature4.jpg" alt="Car 2">
+            <div class="car-info">
+                <h3>Car Model 2</h3>
+                <p>Year: 2023</p>
+                <p>Price: $35,000</p>
+                <button class="cta-button">View Details</button>
+            </div>
+    
+
+    </section>
+
+     <!-- Phone call logo -->
+     <div class="phone-call-logo" onclick="togglePhoneNumber()">
+        <img src="calllogo.png" alt="Phone Logo">
+    </div>
+
+    <!-- Phone number display -->
+    <div class="phone-number" id="phoneNumber">
+        <p>Call us: +1 123-456-7890</p>
+    </div>
+
+    <div class="valuation-title">
+        <h1>Evaluate Your Car Now!!</h1>
+    </div>
+
+
+    <section id="car-evaluation-form">
+        <h2>Car Valuation Form</h2>
+        <form id="valuation-form">
+          <label for="make">Car Make:</label>
+          <input type="text" id="make" required>
+    
+          <label for="model">Car Model:</label>
+          <input type="text" id="model" required>
+    
+          <label for="year">Manufacturing Year:</label>
+          <input type="number" id="year" min="1900" max="2023" required>
+    
+          <label for="mileage">Mileage (in miles):</label>
+          <input type="number" id="mileage" min="0" required>
+    
+          <label for="condition">Condition:</label>
+          <select id="condition" required>
+            <option value="excellent">Excellent</option>
+            <option value="good">Good</option>
+            <option value="fair">Fair</option>
+            <option value="poor">Poor</option>
+          </select>
+    
+          <button type="button" onclick="calculateValuation()">Get Valuation</button>
+        </form>
+    
+        <div id="valuation-result">
+          <h3>Car Valuation Result</h3>
+          <p id="valuation-price">Enter car details and click 'Get Valuation' to see the result.</p>
+        </div>
+      </section>
+
+
+    
 
 
 
@@ -42,6 +157,23 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="first.js"></script>
 
 
 
