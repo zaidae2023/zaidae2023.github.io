@@ -109,6 +109,46 @@ nav ul li a:hover {
     max-width: 500px;
   }
 }
+/* Your existing styles */
+.phone-call-logo {
+  position: fixed;
+  bottom: -35px;
+  right: -25px;
+  cursor: pointer;
+}
+
+.phone-number {
+  display: none;
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+/* Add responsive styles */
+@media (max-width: 768px) {
+  .phone-call-logo {
+    bottom: -35px;
+    right: -30px;
+  }
+  .phone-number {
+    bottom: 60px;
+    right: 10px;
+  }
+}
+@media (max-width: 600px) {
+  .phone-call-logo {
+    bottom: -30px;
+    right: -30px;
+  }
+  .phone-number {
+    bottom: 60px;
+    right: 10px;
+  }
+}
 .footer-distributed {
   background-color: #2c3e50;
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);

@@ -359,6 +359,27 @@ nav ul li a:hover {
   cursor: pointer;
 }
 
+/* Add your styles for the search bar and search results here */
+.search-bar {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#searchResults {
+  max-width: 600px; /* Adjust the width as needed */
+  margin: 0 auto;
+}
+
+#searchResults div {
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+.search-result:hover {
+  background-color: #ff6600;
+}
+
 @media (min-width: 768px) {
   header nav .search-bar {
     max-width: 400px;

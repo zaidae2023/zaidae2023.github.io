@@ -439,6 +439,36 @@ $shadow-color: rgba(0, 0, 0, 0.1);
 
 
 
+   /* Add your styles for the search bar and search results here */
+   .search-bar {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#searchResults {
+    max-width: 600px; /* Adjust the width as needed */
+    margin: 0 auto;
+}
+
+#searchResults div {
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+
+.search-result:hover {
+    background-color: $main-background;
+}
+
+
+
+
+
+
+
+
+
 // Media query for tablet
 @media (min-width: 768px) {
     header {
@@ -803,3 +833,12 @@ header {
         width: 100%; /* Make the map full-width on smaller screens */
     }
 }
+
+
+
+
+
+
+
+
+

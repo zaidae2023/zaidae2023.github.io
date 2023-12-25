@@ -7,9 +7,6 @@ $hero-background: url('hero1.jpg') center/cover no-repeat;
 $main-background:#ff6600;
 
 
-body {
-    background-color:$background-color;
-}
 
 
 
@@ -91,6 +88,7 @@ nav ul li a:hover {
 }
 
 
+
 .search-bar {
     flex: 1;
     margin: 0 20px;
@@ -120,6 +118,32 @@ nav ul li a:hover {
 
 
 
+   /* Add your styles for the search bar and search results here */
+   .search-bar {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#searchResults {
+    max-width: 600px; /* Adjust the width as needed */
+    margin: 0 auto;
+}
+
+#searchResults div {
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+
+.search-result:hover {
+    background-color: $main-background;
+}
+
+
+
+
+
 // Media query for tablet
 @media (min-width: 768px) {
     header {
@@ -145,72 +169,62 @@ nav ul li a:hover {
 }
 
 
-/* Your existing styles */
 
-.phone-call-logo {
-  position: fixed;
-  bottom: -35px;
-  right: -25px;
-  cursor: pointer;
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.phone-number {
-  display: none;
-  position: fixed;
-  bottom: 80px;
-  right: 20px;
-  background-color: #333;
-  color: #fff;
-  padding: 10px;
-  border-radius: 5px;
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+   
+    
 }
 
-/* Add responsive styles */
+h1 {
+    text-align: center;
+}
+
+.specs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.spec {
+    flex: 0 0 calc(33.333% - 20px);
+    margin: 10px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+        background-color: $main-background;
+    }
+}
+
+.image {
+    text-align: center;
+    margin-top: 20px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
 @media (max-width: 768px) {
-  .phone-call-logo {
-      bottom: -35px;
-      right: -30px;
-  }
-
-  .phone-number {
-      bottom: 60px;
-      right: 10px;
-  }
+    .spec {
+        flex: 0 0 100%;
+    }
 }
-
-@media (max-width: 600px) {
-  .phone-call-logo {
-      bottom: -30px;
-      right: -30px;
-      
-  }
-
-  .phone-number {
-      bottom: 60px;
-      right: 10px;
-  }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -397,5 +411,52 @@ nav ul li a:hover {
 @media (max-width: 768px) {
     .footer-right iframe {
         width: 100%; /* Make the map full-width on smaller screens */
+    }
+}
+
+
+/* Your existing styles */
+
+.phone-call-logo {
+    position: fixed;
+    bottom: -35px;
+    right: -25px;
+    cursor: pointer;
+}
+
+.phone-number {
+    display: none;
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Add responsive styles */
+@media (max-width: 768px) {
+    .phone-call-logo {
+        bottom: -35px;
+        right: -30px;
+    }
+
+    .phone-number {
+        bottom: 60px;
+        right: 10px;
+    }
+}
+
+@media (max-width: 600px) {
+    .phone-call-logo {
+        bottom: -30px;
+        right: -30px;
+        
+    }
+
+    .phone-number {
+        bottom: 60px;
+        right: 10px;
     }
 }

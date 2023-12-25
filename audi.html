@@ -3,11 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>browse cars</title>
-    <link rel="stylesheet" href="browse.css">
+    <title>Document</title>
+    <link rel="stylesheet" href="toyota.css">
 </head>
 <body>
 
+
+    
     <header>
 
         <div class="toggle-bar" onclick="toggleNav()">
@@ -24,10 +26,15 @@
             <div id="logo">
                 <img src="logo.png" alt="Logo" width="75px" height="60px">
             </div>
-            <div class="search-bar">
-                <input type="text" placeholder="Search...">
-                <button type="button">Search</button>
-            </div>
+           
+    <div class="search-bar">
+        <input type="text" id="searchInput" placeholder="Search...">
+        <button type="button" onclick="performSearch()">Search</button>
+    </div>
+
+    <div id="searchResults">
+        
+    </div>
 
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -38,16 +45,64 @@
         </nav>
     </header>
 
+         <!-- Phone call logo -->
+         <div class="phone-call-logo" onclick="togglePhoneNumber()">
+            <img src="calllogo.png" alt="Phone Logo">
+        </div>
+    
+        <!-- Phone number display -->
+        <div class="phone-number" id="phoneNumber">
+            <p>Call us: +1 123-456-7890</p>
+        </div>
 
-       <!-- Phone call logo -->
-       <div class="phone-call-logo" onclick="togglePhoneNumber()">
-        <img src="calllogo.png" alt="Phone Logo">
+
+
+
+
+
+
+    <div class="container">
+        <h1>Audi A4 Specifications</h1>
+
+        <div class="specs">
+            <div class="spec">
+                <h2>Engine</h2>
+                <p>4.5L 8-cylinder</p>
+            </div>
+
+            <div class="spec">
+                <h2>Transmission</h2>
+                <p>8-speed Automatic</p>
+            </div>
+
+            <div class="spec">
+                <h2>Horsepower</h2>
+                <p>565 hp</p>
+            </div>
+
+            <div class="spec">
+                <h2>Fuel Economy</h2>
+                <p>29/41 mpg (city/highway)</p>
+            </div>
+
+            <div class="spec">
+                <h2>Dimensions</h2>
+                <p>Midsize Sedan</p>
+            </div>
+
+            <div class="spec">
+                <h2>Price</h2>
+                <p>Starting at $59,970</p>
+            </div>
+        </div>
+
+        <div class="image">
+            <img src="audi.jpg" alt="Toyota Camry">
+        </div>
     </div>
 
-    <!-- Phone number display -->
-    <div class="phone-number" id="phoneNumber">
-        <p>Call us: +1 123-456-7890</p>
-    </div>
+
+
 
 
     <footer class="footer-distributed">
@@ -112,7 +167,6 @@
       </footer>
 
 
-      <script src="browse.js"></script>
 
 
 
@@ -127,6 +181,11 @@
 
 
 
+
+
+
+
+    <script src="toyota.js"></script>
 
 
 
