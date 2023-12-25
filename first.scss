@@ -48,6 +48,14 @@ nav a {
     color: $text-color;
 }
 
+
+/* Add hover effect to navigation links */
+nav ul li a:hover {
+    color: $accent-color; /* Change the color on hover */
+}
+
+
+
 .toggle-bar {
     cursor: pointer;
     display: none;
@@ -452,5 +460,346 @@ $shadow-color: rgba(0, 0, 0, 0.1);
                 max-width: 500px;
             }
         }
+    }
+}
+
+
+
+// Color variables
+$primary-color: #2c3e50;
+$text-color: #333;
+$background-color: #ecf0f1;
+
+/* Style the About Us section */
+#about-us {
+    background-color: $background-color;
+    padding: 40px;
+    text-align: center;
+
+    h2 {
+        color: $primary-color;
+        font-size: 2.5em;
+        margin-bottom: 20px;
+    }
+
+    .about-content {
+        max-width: 800px;
+        margin: 0 auto;
+
+        p {
+            font-size: 1.2em;
+            color: $text-color;
+            margin-bottom: 20px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+            border-radius: 8px;
+        }
+    }
+}
+
+// Responsive styles
+@media only screen and (max-width: 768px) {
+    #about-us {
+        padding: 20px;
+
+        h2 {
+            font-size: 2em;
+        }
+
+        p {
+            font-size: 1em;
+        }
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    #about-us {
+        padding: 20px;
+
+        h2 {
+            font-size: 1.8em;
+        }
+
+        p {
+            font-size: 0.9em;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+$primary-color: #333;
+$accent-color: #ff6600;
+$background-color: #f9f9f9;
+$text-color: #fff;
+$hover-color: #eee;
+$shadow-color: rgba(0, 0, 0, 0.1);
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.calendar {
+    max-width: 1500px;
+    margin: 20px auto;
+    background-color: $background-color;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 0 10px $shadow-color;
+
+    @media (max-width: 768px) {
+        max-width: 90%;
+    }
+}
+
+header {
+    background-color: $primary-color;
+    color: $text-color;
+    padding: 15px;
+    text-align: center;
+}
+
+#calendar-container {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 1px;
+}
+
+.day {
+    padding: 15px;
+    text-align: center;
+    border: 1px solid #ddd;
+
+    @media (max-width: 768px) {
+        padding: 10px;
+    }
+}
+
+.day:hover {
+    background-color: $main-background;
+}
+
+.event {
+    background-color: $accent-color;
+    color: $text-color;
+    padding: 5px;
+    border-radius: 3px;
+    margin-bottom: 5px;
+    cursor: pointer;
+
+    @media (max-width: 768px) {
+        padding: 3px;
+    }
+}
+
+
+
+
+
+.footer-distributed {
+    background-color: $primary-color;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+    box-sizing: border-box;
+    width: 100%;
+    text-align: left;
+    font: bold 16px sans-serif;
+  
+    padding: 55px 50px;
+    margin-top: 80px;
+  }
+  
+  .footer-distributed .footer-left,
+  .footer-distributed .footer-center,
+  .footer-distributed .footer-right {
+    display: inline-block;
+    vertical-align: top;
+  }
+  
+  /* Footer left */
+  
+  .footer-distributed .footer-left {
+    width: 40%;
+  }
+  
+  /* The company logo */
+  
+  .footer-distributed h3 {
+    color: #ffffff;
+    font: normal 36px 'Cookie', cursive;
+    margin: 0;
+  }
+  
+  .footer-distributed h3 span {
+    color: #5383d3;
+  }
+  
+  /* Footer links */
+  
+  .footer-distributed .footer-links {
+    color: #ffffff;
+    margin: 20px 0 12px;
+    padding: 0;
+  }
+  
+  .footer-distributed .footer-links a {
+    display: inline-block;
+    line-height: 1.8;
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .footer-distributed .footer-company-name {
+    color: #8f9296;
+    font-size: 14px;
+    font-weight: normal;
+    margin: 0;
+  }
+  
+  /* Footer Center */
+  
+  .footer-distributed .footer-center {
+    width: 35%;
+  }
+  
+  .footer-distributed .footer-center i {
+    background-color: #33383b;
+    color: #ffffff;
+    font-size: 25px;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 42px;
+    margin: 10px 15px;
+    vertical-align: middle;
+  }
+  
+  .footer-distributed .footer-center .fa {
+    font-size: 15px;
+    line-height: 28px;
+  }
+  
+  .footer-distributed .footer-center p {
+    display: inline-block;
+    color: #ffffff;
+    vertical-align: middle;
+    margin: 0;
+  }
+  
+  .footer-distributed .footer-center p span {
+    display: block;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 2;
+  }
+  
+  .footer-distributed .footer-center p a {
+    color: #5383d3;
+    text-decoration: none;
+  }
+  
+  /* Footer Right */
+  
+  .footer-distributed .footer-right {
+    width: 20%;
+  }
+  
+  .footer-distributed .footer-company-about {
+    line-height: 20px;
+    color: #92999f;
+    font-size: 13px;
+    font-weight: normal;
+    margin: 0;
+  }
+  
+  .footer-distributed .footer-company-about span {
+    display: block;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .footer-distributed .footer-icons {
+    margin-top: 25px;
+  }
+  
+  .footer-distributed .footer-icons a {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    background-color: #33383b;
+    border-radius: 2px;
+  
+    font-size: 20px;
+    color: #ffffff;
+    text-align: center;
+    line-height: 35px;
+  
+    margin-right: 3px;
+    margin-bottom: 5px;
+  }
+  
+  /* If you don't want the footer to be responsive, remove these media queries */
+  
+  @media (max-width: 880px) {
+    .footer-distributed {
+      font: bold 14px sans-serif;
+    }
+  
+    .footer-distributed .footer-left,
+    .footer-distributed .footer-center,
+    .footer-distributed .footer-right {
+      display: block;
+      width: 100%;
+      margin-bottom: 40px;
+      text-align: center;
+    }
+  
+    .footer-distributed .footer-center i {
+      margin-left: 0;
+    }
+  }
+
+  /* Your existing CSS for the footer-right section */
+.footer-right {
+    /* Your existing styles */
+    text-align: center; /* Center-align the content */
+}
+
+.footer-right iframe {
+    max-width: 100%; /* Set a maximum width for the map */
+}
+
+/* Add responsive styles */
+@media (max-width: 768px) {
+    .footer-right iframe {
+        width: 100%; /* Make the map full-width on smaller screens */
     }
 }

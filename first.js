@@ -73,3 +73,62 @@ function calculateValuation() {
 
     document.getElementById('valuation-price').innerHTML = `Your car valuation is $${finalValuation.toFixed(2)}`;
   }
+
+
+
+
+
+
+  document.addEventListener('DOMContentLoaded', function () {
+    const calendarContainer = document.getElementById('calendar-container');
+    const today = new Date();
+    const currentMonth = today.getMonth();
+    const currentYear = today.getFullYear();
+
+    function generateCalendar(year, month) {
+        const firstDay = new Date(year, month, 1);
+        const lastDay = new Date(year, month + 1, 0);
+        const daysInMonth = lastDay.getDate();
+
+        // Clear previous calendar
+        calendarContainer.innerHTML = '';
+
+        // Add day names
+        const dayNames = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+        dayNames.forEach(day => {
+            const dayElement = document.createElement('div');
+            dayElement.className = 'day';
+            dayElement.textContent = day;
+            calendarContainer.appendChild(dayElement);
+        });
+
+        // Add days
+        for (let i = 0; i < firstDay.getDay(); i++) {
+            const emptyDay = document.createElement('div');
+            calendarContainer.appendChild(emptyDay);
+        }
+
+        for (let day = 1; day <= daysInMonth; day++) {
+            const dayElement = document.createElement('div');
+            dayElement.className = 'day';
+            dayElement.textContent = day;
+            dayElement.addEventListener('click', () => showEvents(year, month, day));
+            calendarContainer.appendChild(dayElement);
+        }
+    }
+
+    function showEvents(year, month, day) {
+        // You can implement the logic to fetch and display events for the selected day.
+        // For simplicity, let's just show a sample event.
+        alert(`Events for ${month + 1}/${day}/${year}:\nCar Show at 2:00 PM\nAuction at 4:00 PM`);
+    }
+
+    generateCalendar(currentYear, currentMonth);
+});
+
+
+
+
+
+
+
