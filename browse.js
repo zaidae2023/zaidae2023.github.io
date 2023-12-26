@@ -5,6 +5,19 @@ function toggleNav() {
 
 
 
+var phoneNumber = document.getElementById('phoneNumber');
+
+function togglePhoneNumber() {
+    phoneNumber.style.display = (phoneNumber.style.display === 'none' || phoneNumber.style.display === '') ? 'block' : 'none';
+}
+
+phoneNumber.addEventListener('mouseout', function () {
+    phoneNumber.style.display = 'none';
+});
+
+
+
+
   // Sample car inventory data (replace this with data from your API)
   const carInventoryData = [
     { make: 'Toyota', model: 'Camry', year: 2022, price: 25000 },
