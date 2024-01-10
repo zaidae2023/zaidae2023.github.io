@@ -10,176 +10,154 @@
 
 
     
-    <header>
+   <!-- Header Section -->
+<header>
 
-        <div class="toggle-bar" onclick="toggleNav()">
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
-        </div>
-
-
-
-
-
-        <nav>
-            <div id="logo">
-                <img src="logo.png" alt="Logo" width="75px" height="60px">
-            </div>
-           
-    <div class="search-bar">
-        <input type="text" id="searchInput" placeholder="Search...">
-        <button type="button" onclick="performSearch()">Search</button>
+    <!-- Mobile Navigation Toggle Bar -->
+    <div class="toggle-bar" onclick="toggleNav()">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
     </div>
 
-    <div id="searchResults">
-        
-    </div>
-
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="#about-us">About</a></li>
-                <li><a href="sellcar.html">Sell Your Car</a></li>
-                <!-- Add more navigation links as needed -->
-            </ul>
-        </nav>
-    </header>
-
-
-         <!-- Phone call logo -->
-         <div class="phone-call-logo" onclick="togglePhoneNumber()">
-            <img src="calllogo.png" alt="Phone Logo">
-        </div>
-    
-        <!-- Phone number display -->
-        <div class="phone-number" id="phoneNumber">
-            <p>Call us: +1 123-456-7890</p>
+    <!-- Navigation Section -->
+    <nav>
+        <!-- Logo Section -->
+        <div id="logo">
+            <img src="logo.png" alt="Logo" width="75px" height="60px">
         </div>
 
-
-
-
-
-
-
-    <div class="container">
-        <h1>Ford Specifications</h1>
-
-        <div class="specs">
-            <div class="spec">
-                <h2>Engine</h2>
-                <p>2.7L 4-cylinder</p>
-            </div>
-
-            <div class="spec">
-                <h2>Transmission</h2>
-                <p>5-speed Automatic</p>
-            </div>
-
-            <div class="spec">
-                <h2>Horsepower</h2>
-                <p>170 hp</p>
-            </div>
-
-            <div class="spec">
-                <h2>Fuel Economy</h2>
-                <p>29/41 mpg (city/highway)</p>
-            </div>
-
-            <div class="spec">
-                <h2>Dimensions</h2>
-                <p>Midsize Sedan</p>
-            </div>
-
-            <div class="spec">
-                <h2>Price</h2>
-                <p>Starting at $99,970</p>
-            </div>
+        <!-- Search Bar Section -->
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Search...">
+            <button type="button" onclick="performSearch()">Search</button>
         </div>
 
-        <div class="image">
-            <img src="feature3.jpg" alt="Toyota Camry">
+        <!-- Search Results Section -->
+        <div id="searchResults">
+            <!-- Results will be displayed here dynamically -->
+        </div>
+
+        <!-- Navigation Links Section -->
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#about-us">About</a></li>
+            <li><a href="sellcar.html">Sell Your Car</a></li>
+            <!-- Add more navigation links as needed -->
+        </ul>
+    </nav>
+</header>
+
+<!-- Phone call logo -->
+<div class="phone-call-logo" onclick="togglePhoneNumber()">
+    <img src="calllogo.png" alt="Phone Logo">
+</div>
+
+<!-- Phone number display -->
+<div class="phone-number" id="phoneNumber">
+    <p>Call us: +1 123-456-7890</p>
+</div>
+
+<!-- Container Section for Car Specifications -->
+<div class="container">
+    <h1>Ford Specifications</h1>
+
+    <!-- Specifications Section -->
+    <div class="specs">
+        <div class="spec">
+            <h2>Engine</h2>
+            <p>2.7L 4-cylinder</p>
+        </div>
+
+        <div class="spec">
+            <h2>Transmission</h2>
+            <p>5-speed Automatic</p>
+        </div>
+
+        <div class="spec">
+            <h2>Horsepower</h2>
+            <p>170 hp</p>
+        </div>
+
+        <div class="spec">
+            <h2>Fuel Economy</h2>
+            <p>29/41 mpg (city/highway)</p>
+        </div>
+
+        <div class="spec">
+            <h2>Dimensions</h2>
+            <p>Midsize Sedan</p>
+        </div>
+
+        <div class="spec">
+            <h2>Price</h2>
+            <p>Starting at $99,970</p>
         </div>
     </div>
 
+    <!-- Image Section -->
+    <div class="image">
+        <img src="feature3.jpg" alt="Toyota Camry">
+    </div>
+</div>
 
+<!-- Footer Section -->
+<footer class="footer-distributed">
 
+    <!-- Left Section with Company Logo -->
+    <div class="footer-left">
+        <div><img src="" alt=""></div>
+        <p class="footer-company-name">&copy; 2024 Cars hub</p>
+    </div>
 
-
-    <footer class="footer-distributed">
-
-        <div class="footer-left">
-      
-          <div><img src="http://www.pittsfieldnhschools.org/District_Logo_Alpha2.png" alt=""></div>
-      
-         
-      
-          <p class="footer-company-name"> &copy; 2024 Cars hub</p>
-        </div>
-      
-        <div class="footer-center">
-      
-          <div>
+    <!-- Center Section with Contact Information -->
+    <div class="footer-center">
+        <!-- Location Information -->
+        <div>
             <i class="fa fa-map-marker"></i>
             <p><span>United Arab Emirates</span> Dubai</p>
-          </div>
-      
-          <div>
+        </div>
+        <!-- Phone Information -->
+        <div>
             <i class="fa fa-phone"></i>
             <p>00971527371</p>
-          </div>
-          
-          <div>
+        </div>
+        <!-- Fax Information -->
+        <div>
             <i class="fa fa-fax"></i>
             <p>00971631735</p>
-          </div>
-      
-          <div>
+        </div>
+        <!-- Email Information -->
+        <div>
             <i class="fa fa-envelope"></i>
-            <p><a href="mailto:website@pittsfieldnhschools.org">Carshub.com</a></p>
-          </div>
-      
+            <p><a href="">Carshub.com</a></p>
         </div>
-      
-        <div class="footer-right">
-            <p class="footer-company-about">
-                <span>Locate Us</span>
-            </p>
+    </div>
+
+    <!-- Right Section with Map -->
+    <div class="footer-right">
+        <p class="footer-company-about">
+            <span>Locate Us</span>
+        </p>
         
-            <!-- Add the following iframe for the map -->
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1dYOUR_LATITUDE_LONGITUDE!2dYOUR_LONGITUDE!3dYOUR_LATITUDE!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3AYOUR_PLACE_NAME!2sYOUR_PLACE_NAME!5e0!3m2!1sen!2sus!4vYOUR_MAP_VERSION"
-                width="500"
-                height="250"
-                style="border:0;"
-                allowfullscreen=""
-                loading="lazy"
-            ></iframe>
-            <!-- End of map iframe -->
-        </div>
-        
-        
-            
-      
-      
-      
-        </div>
-      
-      </footer>
+        <!-- Add the following iframe for the map -->
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1dYOUR_LATITUDE_LONGITUDE!2dYOUR_LONGITUDE!3dYOUR_LATITUDE!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3AYOUR_PLACE_NAME!2sYOUR_PLACE_NAME!5e0!3m2!1sen!2sus!4vYOUR_MAP_VERSION"
+            width="500"
+            height="250"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+        ></iframe>
+        <!-- End of map iframe -->
+    </div>
+    
+    </div>
+  
+  </footer>
 
-
-
-
-
-
-    <script src="toyota.js"></script>
-
-
-
-
-
-
-
+<!-- JavaScript Script -->
+<script src="toyota.js"></script>
 
     
 </body>

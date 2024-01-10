@@ -5,10 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="first.css">
+  
+   
+ 
 </head>
 <body>
 
     <header>
+
+        <!-- Navigation toggle bar -->
 
         <div class="toggle-bar" onclick="toggleNav()">
             <div class="bar"></div>
@@ -19,31 +24,37 @@
 
 
 
-
+       <!-- Navigation section -->
         <nav>
+            <!-- Logo -->
             <div id="logo">
                 <img src="logo.png" alt="Logo" width="75px" height="60px">
             </div>
-           
+
+    <!-- Search bar -->    
     <div class="search-bar">
         <input type="text" id="searchInput" placeholder="Search...">
         <button type="button" onclick="performSearch()">Search</button>
     </div>
 
+    <!-- Search results container -->
     <div id="searchResults">
         
     </div>
-
+           <!-- Navigation links -->
             <ul>
                 <li><a href="#">Home</a></li>
                 <li><a href="#about-us">About</a></li>
                 <li><a href="sellcar.html">Sell Your Car</a></li>
-                <!-- Add more navigation links as needed -->
+                
             </ul>
         </nav>
     </header>
 
+    <!-- Hero section -->
     <section id="hero">
+
+        <!-- Hero content with a welcome message -->
         <div class="hero-content">
             <h1>Welcome to Cars Hub</h1>
             <p>Find the perfect car for you.</p>
@@ -51,9 +62,12 @@
         </div>
     </section>
 
-
+    <!-- Featured Cars section -->
     <section id="featured-cars">
+        <!-- Section heading -->
         <h2>Featured Cars</h2>
+
+        <!-- Car container -->
         <div class="car-container">
             <div class="car">
                 <img src="feature1.jpg" alt="Car 1">
@@ -93,7 +107,7 @@
                 <p>Year: 2023</p>
                 <p>Price: $59,970</p>
                 <a href="audi.html" class="cta-button">View Details</a>
-            </div>
+            </div><!-- End of car container -->
     
 
     </section>
@@ -108,11 +122,13 @@
         <p>Call us: +1 123-456-7890</p>
     </div>
 
+    <!-- Valuation Title Section -->
     <div class="valuation-title">
+        <!-- Title for car valuation -->
         <h1>Evaluate Your Car Now!!</h1>
     </div>
 
-
+    <!-- Car Evaluation Form Section -->
     <section id="car-evaluation-form">
         <h2>Car Valuation Form</h2>
         <form id="valuation-form">
@@ -135,10 +151,13 @@
             <option value="fair">Fair</option>
             <option value="poor">Poor</option>
           </select>
+
+          <!-- Button to trigger valuation calculation -->
     
           <button type="button" onclick="calculateValuation()">Get Valuation</button>
         </form>
-    
+
+        <!-- Valuation Result Section -->
         <div id="valuation-result">
           <h3>Car Valuation Result</h3>
           <p id="valuation-price">Enter car details and click 'Get Valuation' to see the result.</p>
@@ -146,7 +165,7 @@
       </section>
 
 
-
+      <!-- About Us Section -->
       <section id="about-us">
         <h2>About Us</h2>
         <div class="about-content">
@@ -157,8 +176,7 @@
     </section>
 
 
-
-
+      <!-- Car Events Calendar Section -->
 
       <div class="calendar">
         <header>
@@ -169,22 +187,16 @@
 
 
 
-    
 
 
+<!-- Footer credit goes to codepen -->
 
-
-
-
-
-
-
-
+    <!-- Footer Section with Distributed Layout -->
     <footer class="footer-distributed">
 
         <div class="footer-left">
       
-          <div><img src="http://www.pittsfieldnhschools.org/District_Logo_Alpha2.png" alt=""></div>
+          <div><img src="" alt=""></div>
       
          
       
@@ -210,7 +222,7 @@
       
           <div>
             <i class="fa fa-envelope"></i>
-            <p><a href="mailto:website@pittsfieldnhschools.org">Carshub.com</a></p>
+            <p><a href="">Carshub.com</a></p>
           </div>
       
         </div>
@@ -232,10 +244,6 @@
             <!-- End of map iframe -->
         </div>
         
-        
-            
-      
-      
       
         </div>
       
@@ -243,53 +251,7 @@
 
 
 
-
-
-
-
-
-
-     
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     <script src="first.js"></script>
-
-
-
-
-
-
 
 
     

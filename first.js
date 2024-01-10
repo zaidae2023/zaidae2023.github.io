@@ -1,6 +1,9 @@
+// Image Gallery Slider
 document.addEventListener('DOMContentLoaded', function () {
+    // Get necessary elements
     const imageGallery = document.getElementById('imageGallery');
     const hero = document.getElementById('hero');
+    // Array of hero images
     const heroImages = [
         'hero1.jpg',
         'hero2.jpg',
@@ -9,36 +12,35 @@ document.addEventListener('DOMContentLoaded', function () {
     ];
     let currentImageIndex = 0;
 
+    // Set interval to change hero image every 3.5 seconds
     setInterval(() => {
         currentImageIndex = (currentImageIndex + 1) % heroImages.length;
         const imageUrl = `url('${heroImages[currentImageIndex]}') center/cover no-repeat`;
         hero.style.background = imageUrl;
-    }, 3500); // Change image every 5 seconds (adjust as needed)
+    }, 3500); // Change image every 3.5 seconds (adjust as needed)
 });
 
-
+// Navigation toggle
 function toggleNav() {
     var nav = document.querySelector('nav');
     nav.classList.toggle('show');
 }
 
-
-
+// Phone number toggle
 var phoneNumber = document.getElementById('phoneNumber');
 
 function togglePhoneNumber() {
     phoneNumber.style.display = (phoneNumber.style.display === 'none' || phoneNumber.style.display === '') ? 'block' : 'none';
 }
 
+// Hide phone number on mouseout
 phoneNumber.addEventListener('mouseout', function () {
     phoneNumber.style.display = 'none';
 });
 
-
-
-
-
+// Car Valuation Calculator
 function calculateValuation() {
+    // Get input values
     const make = document.getElementById('make').value;
     const model = document.getElementById('model').value;
     const year = parseInt(document.getElementById('year').value);
@@ -51,40 +53,40 @@ function calculateValuation() {
     const mileagePenalty = mileage > 100000 ? (mileage - 100000) * 0.1 : 0;
     let conditionMultiplier;
 
+    // Set condition multiplier based on selected condition
     switch (condition) {
-      case 'excellent':
-        conditionMultiplier = 1.2;
-        break;
-      case 'good':
-        conditionMultiplier = 1.0;
-        break;
-      case 'fair':
-        conditionMultiplier = 0.8;
-        break;
-      case 'poor':
-        conditionMultiplier = 0.5;
-        break;
-      default:
-        conditionMultiplier = 1.0;
+        case 'excellent':
+            conditionMultiplier = 1.2;
+            break;
+        case 'good':
+            conditionMultiplier = 1.0;
+            break;
+        case 'fair':
+            conditionMultiplier = 0.8;
+            break;
+        case 'poor':
+            conditionMultiplier = 0.5;
+            break;
+        default:
+            conditionMultiplier = 1.0;
     }
 
+    // Calculate valuation
     const valuation = basePrice - ageDiscount - mileagePenalty;
     const finalValuation = valuation * conditionMultiplier;
 
+    // Display the valuation
     document.getElementById('valuation-price').innerHTML = `Your car valuation is $${finalValuation.toFixed(2)}`;
-  }
+}
 
-
-
-
-
-
-  document.addEventListener('DOMContentLoaded', function () {
+// Calendar
+document.addEventListener('DOMContentLoaded', function () {
     const calendarContainer = document.getElementById('calendar-container');
     const today = new Date();
     const currentMonth = today.getMonth();
     const currentYear = today.getFullYear();
 
+    // Generate calendar
     function generateCalendar(year, month) {
         const firstDay = new Date(year, month, 1);
         const lastDay = new Date(year, month + 1, 0);
@@ -102,12 +104,13 @@ function calculateValuation() {
             calendarContainer.appendChild(dayElement);
         });
 
-        // Add days
+        // Add empty days before the first day
         for (let i = 0; i < firstDay.getDay(); i++) {
             const emptyDay = document.createElement('div');
             calendarContainer.appendChild(emptyDay);
         }
 
+        // Add days
         for (let day = 1; day <= daysInMonth; day++) {
             const dayElement = document.createElement('div');
             dayElement.className = 'day';
@@ -117,98 +120,55 @@ function calculateValuation() {
         }
     }
 
+    // Show events for a specific day (for demonstration purposes)
     function showEvents(year, month, day) {
-        // You can implement the logic to fetch and display events for the selected day.
-        // For simplicity, let's just show a sample event.
         alert(`Events for ${month + 1}/${day}/${year}:\nCar Show at 2:00 PM\nAuction at 4:00 PM`);
     }
 
+    // Generate calendar for the current month
     generateCalendar(currentYear, currentMonth);
 });
 
+// Search functionality
+const websiteContent = [
+    { id: 1, title: 'Toyota Camry', page: 'toyota', content: '' },
+    { id: 2, title: 'Honda Accord', page: 'honda', content: '' },
+    { id: 3, title: 'Ford Mustang', page: 'ford', content: '' },
+    { id: 4, title: 'Audi A4', page: 'audi', content: '' },
+    { id: 5, title: 'Nissan Altima', page: 'nissan', content: '' },
+    // Add more pages as needed
+];
 
+// Perform search based on user input
+function performSearch() {
+    const query = document.getElementById('searchInput').value.toLowerCase();
 
+    // Perform a basic search on your content
+    const searchResults = websiteContent.filter(page =>
+        page.title.toLowerCase().includes(query) || page.content.toLowerCase().includes(query)
+    );
 
+    // Display search results on the page
+    displaySearchResults(searchResults);
+}
 
+// Display search results on the page
+function displaySearchResults(results) {
+    const resultsContainer = document.getElementById('searchResults');
+    resultsContainer.innerHTML = ''; // Clear previous results
 
-
-    // Sample data with added links
-    const websiteContent = [
-        { id: 1, title: 'Toyota Camry', page: 'toyota', content: '' },
-        { id: 2, title: 'Honda Accord', page: 'honda', content: '' },
-        { id: 3, title: 'Ford Mustang', page: 'ford', content: '' },
-        { id: 4, title: 'Audi A4', page: 'audi', content: '' },
-        { id: 5, title: 'Nissan Altima', page: 'nissan', content: '' },
-        // Add more pages as needed
-    ];
-
-    function performSearch() {
-        const query = document.getElementById('searchInput').value.toLowerCase();
-
-        // Perform a basic search on your content
-        const searchResults = websiteContent.filter(page =>
-            page.title.toLowerCase().includes(query) || page.content.toLowerCase().includes(query)
-        );
-
-        // Display search results on the page
-        displaySearchResults(searchResults);
-    }
-
-    function displaySearchResults(results) {
-        const resultsContainer = document.getElementById('searchResults');
-        resultsContainer.innerHTML = ''; // Clear previous results
-
-        if (results.length === 0) {
-            resultsContainer.innerHTML = '<p>No results found.</p>';
-        } else {
-            results.forEach(result => {
-                const resultElement = document.createElement('div');
-                resultElement.classList.add('search-result');
-                // Add a link to the specific page for each car
-                resultElement.innerHTML = `<a href="${result.page}.html"><h3>${result.title}</h3></a><p>${result.content}</p>`;
-                resultsContainer.appendChild(resultElement);
-            });
-        }
-    }
-
-
-
-
-    $(document).ready(function(){
-  
-        var mousePos = {};
-      
-       function getRandomInt(min, max) {
-         return Math.round(Math.random() * (max - min + 1)) + min;
-       }
-        
-        $(window).mousemove(function(e) {
-          mousePos.x = e.pageX;
-          mousePos.y = e.pageY;
+    if (results.length === 0) {
+        resultsContainer.innerHTML = '<p>No results found.</p>';
+    } else {
+        results.forEach(result => {
+            const resultElement = document.createElement('div');
+            resultElement.classList.add('search-result');
+            // Add a link to the specific page for each car
+            resultElement.innerHTML = `<a href="${result.page}.html"><h3>${result.title}</h3></a><p>${result.content}</p>`;
+            resultsContainer.appendChild(resultElement);
         });
-        
-        $(window).mouseleave(function(e) {
-          mousePos.x = -1;
-          mousePos.y = -1;
-        });
-        
-        var draw = setInterval(function(){
-          if(mousePos.x > 0 && mousePos.y > 0){
-            
-            var range = 15;
-            
-            var color = "background: rgb("+getRandomInt(0,255)+","+getRandomInt(0,255)+","+getRandomInt(0,255)+");";
-            
-            var sizeInt = getRandomInt(10, 30);
-            size = "height: " + sizeInt + "px; width: " + sizeInt + "px;";
-            
-            var left = "left: " + getRandomInt(mousePos.x-range-sizeInt, mousePos.x+range) + "px;";
-            
-            var top = "top: " + getRandomInt(mousePos.y-range-sizeInt, mousePos.y+range) + "px;"; 
-      
-            var style = left+top+color+size;
-            $("<div class='ball' style='" + style + "'></div>").appendTo('#wrap').one("webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend", function(){$(this).remove();}); 
-          }
-        }, 1);
-      });
-      
+    }
+}
+
+
+    

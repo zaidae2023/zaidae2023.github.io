@@ -1,12 +1,11 @@
+// Function to toggle the visibility of the navigation menu
 function toggleNav() {
     var nav = document.querySelector('nav');
     nav.classList.toggle('show');
 }
 
-
-
- // Sample data with added links
- const websiteContent = [
+// Sample data with added links
+const websiteContent = [
     { id: 1, title: 'Toyota Camry', page: 'toyota', content: '' },
     { id: 2, title: 'Honda Accord', page: 'honda', content: '' },
     { id: 3, title: 'Ford Mustang', page: 'ford', content: '' },
@@ -15,6 +14,7 @@ function toggleNav() {
     // Add more pages as needed
 ];
 
+// Function to perform a search based on user input
 function performSearch() {
     const query = document.getElementById('searchInput').value.toLowerCase();
 
@@ -27,6 +27,7 @@ function performSearch() {
     displaySearchResults(searchResults);
 }
 
+// Function to display search results on the page
 function displaySearchResults(results) {
     const resultsContainer = document.getElementById('searchResults');
     resultsContainer.innerHTML = ''; // Clear previous results

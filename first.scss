@@ -4,16 +4,11 @@ $accent-color: #ff6600;
 $text-color: #fff;
 $background-color: #2c3e50;
 $hero-background: url('hero1.jpg') center/cover no-repeat;
-$main-background:#ff6600;
-
+$main-background: #ff6600;
 
 body {
-    background-color:$background-color;
+    background-color: $background-color;
 }
-
-
-
-
 
 /* Style the header and navigation */
 header {
@@ -48,13 +43,10 @@ nav a {
     color: $text-color;
 }
 
-
 /* Add hover effect to navigation links */
 nav ul li a:hover {
     color: $accent-color; /* Change the color on hover */
 }
-
-
 
 .toggle-bar {
     cursor: pointer;
@@ -91,9 +83,6 @@ nav ul li a:hover {
 }
 
 
-
-
-
 /* Style the hero image */
 #hero {
     background: $hero-background;
@@ -123,7 +112,6 @@ nav ul li a:hover {
     animation: fadeInUp 1s ease-in-out 0.5s;
 }
 
-
 @keyframes fadeInUp {
     from {
         opacity: 0;
@@ -134,8 +122,6 @@ nav ul li a:hover {
         transform: translateY(0);
     }
 }
-
-
 
 .cta-button {
     display: inline-block;
@@ -150,7 +136,6 @@ nav ul li a:hover {
 .cta-button:hover {
     background-color: darken($accent-color, 10%);
 }
-
 
 /* Add responsive styles */
 @media (max-width: 768px) {
@@ -191,7 +176,6 @@ nav ul li a:hover {
         padding: 8px 16px;
     }
 }
-
 
 /* Your existing code */
 
@@ -284,14 +268,11 @@ nav ul li a:hover {
 
 /* Add responsive styles */
 @media (max-width: 768px) {
-    
-
     .car {
         width: 100%;
         margin-bottom: 20px;
     }
 }
-
 
 /* Your existing styles */
 
@@ -330,7 +311,6 @@ nav ul li a:hover {
     .phone-call-logo {
         bottom: -30px;
         right: -30px;
-        
     }
 
     .phone-number {
@@ -339,9 +319,11 @@ nav ul li a:hover {
     }
 }
 
-/* Add more media queries as needed */
 
 
+
+
+// Color variables for the car evaluation form
 $primary-color: #ff6600;
 $background-color: #f4f4f4;
 $form-background-color: #fff;
@@ -403,13 +385,13 @@ $shadow-color: rgba(0, 0, 0, 0.1);
   }
 }
 
+// Additional styling for valuation title
 .valuation-title {
     text-align: center;
-    color:$text-color ;
+    color: $text-color; // Assuming $text-color is defined elsewhere
 }
 
-
-
+// Styles for the search bar
 .search-bar {
     flex: 1;
     margin: 0 20px;
@@ -428,8 +410,8 @@ $shadow-color: rgba(0, 0, 0, 0.1);
         right: -16px;
         top: 50%;
         transform: translateY(-50%);
-        background-color: $accent-color;
-        color: $text-color;
+        background-color: $accent-color; // Assuming $accent-color is defined elsewhere
+        color: $text-color; // Assuming $text-color is defined elsewhere
         border: none;
         border-radius: 5px;
         padding: 8px;
@@ -437,10 +419,8 @@ $shadow-color: rgba(0, 0, 0, 0.1);
     }
 }
 
-
-
-   /* Add your styles for the search bar and search results here */
-   .search-bar {
+// Styles for search results
+.search-bar {
     text-align: center;
     margin-bottom: 20px;
 }
@@ -456,18 +436,9 @@ $shadow-color: rgba(0, 0, 0, 0.1);
     padding: 10px;
 }
 
-
 .search-result:hover {
-    background-color: $main-background;
+    background-color: $main-background; // Assuming $main-background is defined elsewhere
 }
-
-
-
-
-
-
-
-
 
 // Media query for tablet
 @media (min-width: 768px) {
@@ -493,14 +464,12 @@ $shadow-color: rgba(0, 0, 0, 0.1);
     }
 }
 
-
-
-// Color variables
+// Color variables for the About Us section
 $primary-color: #2c3e50;
 $text-color: #333;
 $background-color: #ecf0f1;
 
-/* Style the About Us section */
+// Styles for the About Us section
 #about-us {
     background-color: $background-color;
     padding: 40px;
@@ -531,7 +500,7 @@ $background-color: #ecf0f1;
     }
 }
 
-// Responsive styles
+// Responsive styles for the About Us section
 @media only screen and (max-width: 768px) {
     #about-us {
         padding: 20px;
@@ -562,25 +531,7 @@ $background-color: #ecf0f1;
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// Color variables
 $primary-color: #333;
 $accent-color: #ff6600;
 $background-color: #f9f9f9;
@@ -588,12 +539,14 @@ $text-color: #fff;
 $hover-color: #eee;
 $shadow-color: rgba(0, 0, 0, 0.1);
 
+// Body styles
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
 }
 
+// Calendar container styles
 .calendar {
     max-width: 1500px;
     margin: 20px auto;
@@ -607,6 +560,7 @@ body {
     }
 }
 
+// Header styles
 header {
     background-color: $primary-color;
     color: $text-color;
@@ -614,12 +568,14 @@ header {
     text-align: center;
 }
 
+// Calendar container grid
 #calendar-container {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
     gap: 1px;
 }
 
+// Day styles
 .day {
     padding: 15px;
     text-align: center;
@@ -630,10 +586,12 @@ header {
     }
 }
 
+// Hover effect for days
 .day:hover {
-    background-color: $main-background;
+    background-color: $main-background; // Assuming $main-background is defined elsewhere
 }
 
+// Event styles
 .event {
     background-color: $accent-color;
     color: $text-color;
@@ -647,10 +605,7 @@ header {
     }
 }
 
-
-
-
-
+// Footer styles
 .footer-distributed {
     background-color: $primary-color;
     box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
@@ -658,65 +613,62 @@ header {
     width: 100%;
     text-align: left;
     font: bold 16px sans-serif;
-  
+
     padding: 55px 50px;
     margin-top: 80px;
-  }
-  
-  .footer-distributed .footer-left,
-  .footer-distributed .footer-center,
-  .footer-distributed .footer-right {
+}
+
+// Footer sections
+.footer-distributed .footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right {
     display: inline-block;
     vertical-align: top;
-  }
-  
-  /* Footer left */
-  
-  .footer-distributed .footer-left {
+}
+
+// Footer left section
+.footer-distributed .footer-left {
     width: 40%;
-  }
-  
-  /* The company logo */
-  
-  .footer-distributed h3 {
+}
+
+// Footer company logo
+.footer-distributed h3 {
     color: #ffffff;
     font: normal 36px 'Cookie', cursive;
     margin: 0;
-  }
-  
-  .footer-distributed h3 span {
+}
+
+.footer-distributed h3 span {
     color: #5383d3;
-  }
-  
-  /* Footer links */
-  
-  .footer-distributed .footer-links {
+}
+
+// Footer links
+.footer-distributed .footer-links {
     color: #ffffff;
     margin: 20px 0 12px;
     padding: 0;
-  }
-  
-  .footer-distributed .footer-links a {
+}
+
+.footer-distributed .footer-links a {
     display: inline-block;
     line-height: 1.8;
     text-decoration: none;
     color: inherit;
-  }
-  
-  .footer-distributed .footer-company-name {
+}
+
+.footer-distributed .footer-company-name {
     color: #8f9296;
     font-size: 14px;
     font-weight: normal;
     margin: 0;
-  }
-  
-  /* Footer Center */
-  
-  .footer-distributed .footer-center {
+}
+
+// Footer center section
+.footer-distributed .footer-center {
     width: 35%;
-  }
-  
-  .footer-distributed .footer-center i {
+}
+
+.footer-distributed .footer-center i {
     background-color: #33383b;
     color: #ffffff;
     font-size: 25px;
@@ -727,97 +679,95 @@ header {
     line-height: 42px;
     margin: 10px 15px;
     vertical-align: middle;
-  }
-  
-  .footer-distributed .footer-center .fa {
+}
+
+.footer-distributed .footer-center .fa {
     font-size: 15px;
     line-height: 28px;
-  }
-  
-  .footer-distributed .footer-center p {
+}
+
+.footer-distributed .footer-center p {
     display: inline-block;
     color: #ffffff;
     vertical-align: middle;
     margin: 0;
-  }
-  
-  .footer-distributed .footer-center p span {
+}
+
+.footer-distributed .footer-center p span {
     display: block;
     font-weight: normal;
     font-size: 14px;
     line-height: 2;
-  }
-  
-  .footer-distributed .footer-center p a {
+}
+
+.footer-distributed .footer-center p a {
     color: #5383d3;
     text-decoration: none;
-  }
-  
-  /* Footer Right */
-  
-  .footer-distributed .footer-right {
+}
+
+// Footer right section
+.footer-distributed .footer-right {
     width: 20%;
-  }
-  
-  .footer-distributed .footer-company-about {
+}
+
+.footer-distributed .footer-company-about {
     line-height: 20px;
     color: #92999f;
     font-size: 13px;
     font-weight: normal;
     margin: 0;
-  }
-  
-  .footer-distributed .footer-company-about span {
+}
+
+.footer-distributed .footer-company-about span {
     display: block;
     color: #ffffff;
     font-size: 14px;
     font-weight: bold;
     margin-bottom: 20px;
-  }
-  
-  .footer-distributed .footer-icons {
+}
+
+.footer-distributed .footer-icons {
     margin-top: 25px;
-  }
-  
-  .footer-distributed .footer-icons a {
+}
+
+.footer-distributed .footer-icons a {
     display: inline-block;
     width: 35px;
     height: 35px;
     cursor: pointer;
     background-color: #33383b;
     border-radius: 2px;
-  
+
     font-size: 20px;
     color: #ffffff;
     text-align: center;
     line-height: 35px;
-  
+
     margin-right: 3px;
     margin-bottom: 5px;
-  }
-  
-  /* If you don't want the footer to be responsive, remove these media queries */
-  
-  @media (max-width: 880px) {
+}
+
+// Responsive styles for the footer
+@media (max-width: 880px) {
     .footer-distributed {
-      font: bold 14px sans-serif;
+        font: bold 14px sans-serif;
     }
-  
+
     .footer-distributed .footer-left,
     .footer-distributed .footer-center,
     .footer-distributed .footer-right {
-      display: block;
-      width: 100%;
-      margin-bottom: 40px;
-      text-align: center;
+        display: block;
+        width: 100%;
+        margin-bottom: 40px;
+        text-align: center;
     }
-  
-    .footer-distributed .footer-center i {
-      margin-left: 0;
-    }
-  }
 
-  /* Your existing CSS for the footer-right section */
+    .footer-distributed .footer-center i {
+        margin-left: 0;
+    }
+}
+
+// Your existing CSS for the footer-right section
 .footer-right {
     /* Your existing styles */
     text-align: center; /* Center-align the content */
@@ -827,7 +777,7 @@ header {
     max-width: 100%; /* Set a maximum width for the map */
 }
 
-/* Add responsive styles */
+// Add responsive styles for the footer-right section
 @media (max-width: 768px) {
     .footer-right iframe {
         width: 100%; /* Make the map full-width on smaller screens */
@@ -835,53 +785,5 @@ header {
 }
 
 
-
-
-
-
-@import url(https://fonts.googleapis.com/css?family=Open+Sans);
-
-html, body {
-  height: 100%;
-  margin: 0;
-  position: relative;
-  background: #222;
-  font-family: "Open Sans";
-}
-
-#wrap {
-  width: 100%;
-  height: 100%;
-  position: relative;
-  overflow: hidden;
-}
-
-#wrap p {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translateX(-50%) translateY(-50%);
-  color: rgba(255,255,255,.5);
-  font-size: 30px;
-  text-transform: uppercase;
-  letter-spacing: 5px;
-  text-align: center;
-}
-
-.ball {
-  pointer-events: none;
-  position: absolute; 
-  width: 10px;
-  height: 10px;
-  border-radius: 50%; 
-  background: gray;
-  animation: implode 1s ease-in-out;
-  animation-fill-mode: both;
-  opacity: .5;
-}
-
-@keyframes implode {
-  100% {transform: scale(0)}
-}
 
 

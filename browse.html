@@ -8,117 +8,60 @@
 </head>
 <body>
 
-    <header>
+    <!-- Header section -->
+<header>
+    <!-- Navigation toggle button -->
+    <div class="toggle-bar" onclick="toggleNav()">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+    </div>
 
-        <div class="toggle-bar" onclick="toggleNav()">
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
+    <!-- Navigation bar -->
+    <nav>
+        <div id="logo">
+            <img src="logo.png" alt="Logo" width="75px" height="60px">
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="Search...">
+            <button type="button">Search</button>
         </div>
 
+        <!-- Navigation links -->
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#about-us">About</a></li>
+            <li><a href="sellcar.html">Sell Your Car</a></li>
+            <!-- Add more navigation links as needed -->
+        </ul>
+    </nav>
+</header>
 
-
-
-
-        <nav>
-            <div id="logo">
-                <img src="logo.png" alt="Logo" width="75px" height="60px">
-            </div>
-            <div class="search-bar">
-                <input type="text" placeholder="Search...">
-                <button type="button">Search</button>
-            </div>
-
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="#about-us">About</a></li>
-                <li><a href="sellcar.html">Sell Your Car</a></li>
-                <!-- Add more navigation links as needed -->
-            </ul>
-        </nav>
-    </header>
-
-
-
-
-    <section id="hero">
-      <div class="hero-content">
-          <h1>Explore Our Vehicle Inventory</h1>
-          <p>Find the perfect car for you.</p>
-      </div>
-  </section>
-
-
-       <!-- Phone call logo -->
-       <div class="phone-call-logo" onclick="togglePhoneNumber()">
-        <img src="calllogo.png" alt="Phone Logo">
+<!-- Hero section -->
+<section id="hero">
+    <div class="hero-content">
+        <h1>Explore Our Vehicle Inventory</h1>
+        <p>Find the perfect car for you.</p>
     </div>
+</section>
 
-    <!-- Phone number display -->
-    <div class="phone-number" id="phoneNumber">
-        <p>Call us: +1 123-456-7890</p>
-    </div>
+<!-- Phone call logo -->
+<div class="phone-call-logo" onclick="togglePhoneNumber()">
+    <img src="calllogo.png" alt="Phone Logo">
+</div>
 
+<!-- Phone number display -->
+<div class="phone-number" id="phoneNumber">
+    <p>Call us: +1 123-456-7890</p>
+</div>
 
-
-    
-    <section id="featured-cars">
-      <h2>For Sale</h2>
-      <div class="car-container">
-          <div class="car">
-              <img src="feature1.jpg" alt="Car 1">
-              <div class="car-info">
-                  <h3>Toyota Camry</h3>
-                  <p>Year: 2022</p>
-                  <p>Price: $24,970</p>
-                  <a href="toyota.html" class="cta-button">View Details</a>
-              </div>
-          </div>
-          <div class="car">
-              <img src="feature2.jpg" alt="Car 2">
-              <div class="car-info">
-                  <h3>Honda Accord</h3>
-                  <p>Year: 2023</p>
-                  <p>Price: $29,970</p>
-                  <a href="honda.html" class="cta-button">View Details</a>
-              </div>
-
-          </div>
-          <div class="car">
-              <img src="feature3.jpg" alt="Car 2">
-              <div class="car-info">
-                  <h3>Ford</h3>
-                  <p>Year: 2023</p>
-                  <p>Price: $99,970</p>
-                  <a href="ford.html" class="cta-button">View Details</a>
-              </div>
-
-              
-
-          <!-- Add more car entries as needed -->
-      </div>
-
-      <div class="car">
-          <img src="feature4.jpg" alt="Car 2">
-          <div class="car-info">
-              <h3>Audi A4</h3>
-              <p>Year: 2023</p>
-              <p>Price: $59,970</p>
-              <a href="audi.html" class="cta-button">View Details</a>
-          </div>
-
-          
-  
-
-  </section>
-
-
-
-  <section id="featured-cars">
-    <h2></h2>
+<!-- Featured cars section -->
+<section id="featured-cars">
+    <h2>For Sale</h2>
     <div class="car-container">
+        <!-- Car 1 -->
         <div class="car">
-            <img src="sale1.jpg" alt="Car 1">
+            <img src="feature1.jpg" alt="Car 1">
             <div class="car-info">
                 <h3>Toyota Camry</h3>
                 <p>Year: 2022</p>
@@ -126,208 +69,185 @@
                 <a href="toyota.html" class="cta-button">View Details</a>
             </div>
         </div>
+        <!-- Car 2 -->
         <div class="car">
-            <img src="sale2.jpg" alt="Car 2">
+            <img src="feature2.jpg" alt="Car 2">
             <div class="car-info">
                 <h3>Honda Accord</h3>
                 <p>Year: 2023</p>
                 <p>Price: $29,970</p>
                 <a href="honda.html" class="cta-button">View Details</a>
             </div>
-
         </div>
+        <!-- Car 3 -->
         <div class="car">
-            <img src="sale3.jpg" alt="Car 2">
+            <img src="feature3.jpg" alt="Car 3">
             <div class="car-info">
                 <h3>Ford</h3>
                 <p>Year: 2023</p>
                 <p>Price: $99,970</p>
                 <a href="ford.html" class="cta-button">View Details</a>
             </div>
-
-            
-
+        </div>
+        <!-- Car 4 -->
+        <div class="car">
+            <img src="feature4.jpg" alt="Car 4">
+            <div class="car-info">
+                <h3>Audi A4</h3>
+                <p>Year: 2023</p>
+                <p>Price: $59,970</p>
+                <a href="audi.html" class="cta-button">View Details</a>
+            </div>
+        </div>
         <!-- Add more car entries as needed -->
     </div>
-
-    <div class="car">
-        <img src="sale4.jpg" alt="Car 2">
-        <div class="car-info">
-            <h3>Audi A4</h3>
-            <p>Year: 2023</p>
-            <p>Price: $59,970</p>
-            <a href="audi.html" class="cta-button">View Details</a>
-        </div>
-
-        
-
-
 </section>
 
-
-
-
-
+<!-- Featured cars section 2 -->
 <section id="featured-cars">
-  <h2></h2>
-  <div class="car-container">
-      <div class="car">
-          <img src="sale5.jpg" alt="Car 1">
-          <div class="car-info">
-              <h3>Toyota Camry</h3>
-              <p>Year: 2022</p>
-              <p>Price: $24,970</p>
-              <a href="toyota.html" class="cta-button">View Details</a>
-          </div>
-      </div>
-      <div class="car">
-          <img src="sale6.jpg" alt="Car 2">
-          <div class="car-info">
-              <h3>Honda Accord</h3>
-              <p>Year: 2023</p>
-              <p>Price: $29,970</p>
-              <a href="honda.html" class="cta-button">View Details</a>
-          </div>
-
-      </div>
-      <div class="car">
-          <img src="sale7.jpg" alt="Car 2">
-          <div class="car-info">
-              <h3>Ford</h3>
-              <p>Year: 2023</p>
-              <p>Price: $99,970</p>
-              <a href="ford.html" class="cta-button">View Details</a>
-          </div>
-
-          
-
-      <!-- Add more car entries as needed -->
-  </div>
-
-  <div class="car">
-      <img src="sale8.jpg" alt="Car 2">
-      <div class="car-info">
-          <h3>Audi A4</h3>
-          <p>Year: 2023</p>
-          <p>Price: $59,970</p>
-          <a href="audi.html" class="cta-button">View Details</a>
-      </div>
-
-      
-
-
+    <h2></h2>
+    <div class="car-container">
+        <!-- Car 5 -->
+        <div class="car">
+            <img src="sale1.jpg" alt="Car 5">
+            <div class="car-info">
+                <h3>Toyota Camry</h3>
+                <p>Year: 2022</p>
+                <p>Price: $24,970</p>
+                <a href="toyota.html" class="cta-button">View Details</a>
+            </div>
+        </div>
+        <!-- Car 6 -->
+        <div class="car">
+            <img src="sale2.jpg" alt="Car 6">
+            <div class="car-info">
+                <h3>Honda Accord</h3>
+                <p>Year: 2023</p>
+                <p>Price: $29,970</p>
+                <a href="honda.html" class="cta-button">View Details</a>
+            </div>
+        </div>
+        <!-- Car 7 -->
+        <div class="car">
+            <img src="sale3.jpg" alt="Car 7">
+            <div class="car-info">
+                <h3>Ford</h3>
+                <p>Year: 2023</p>
+                <p>Price: $99,970</p>
+                <a href="ford.html" class="cta-button">View Details</a>
+            </div>
+        </div>
+        <!-- Car 8 -->
+        <div class="car">
+            <img src="sale4.jpg" alt="Car 8">
+            <div class="car-info">
+                <h3>Audi A4</h3>
+                <p>Year: 2023</p>
+                <p>Price: $59,970</p>
+                <a href="audi.html" class="cta-button">View Details</a>
+            </div>
+        </div>
+        <!-- Add more car entries as needed -->
+    </div>
 </section>
 
-
-    
-
-
-
-
-
-
-
-
-    
-
-
-
-
-
-    <footer class="footer-distributed">
-
-        <div class="footer-left">
-      
-          <div><img src="http://www.pittsfieldnhschools.org/District_Logo_Alpha2.png" alt=""></div>
-      
-         
-      
-          <p class="footer-company-name"> &copy; 2024 Cars hub</p>
+<!-- Featured cars section 3 -->
+<section id="featured-cars">
+    <h2></h2>
+    <div class="car-container">
+        <!-- Car 9 -->
+        <div class="car">
+            <img src="sale5.jpg" alt="Car 9">
+            <div class="car-info">
+                <h3>Toyota Camry</h3>
+                <p>Year: 2022</p>
+                <p>Price: $24,970</p>
+                <a href="toyota.html" class="cta-button">View Details</a>
+            </div>
         </div>
-      
-        <div class="footer-center">
-      
-          <div>
+        <!-- Car 10 -->
+        <div class="car">
+            <img src="sale6.jpg" alt="Car 10">
+            <div class="car-info">
+                <h3>Honda Accord</h3>
+                <p>Year: 2023</p>
+                <p>Price: $29,970</p>
+                <a href="honda.html" class="cta-button">View Details</a>
+            </div>
+        </div>
+        <!-- Car 11 -->
+        <div class="car">
+            <img src="sale7.jpg" alt="Car 11">
+            <div class="car-info">
+                <h3>Ford</h3>
+                <p>Year: 2023</p>
+                <p>Price: $99,970</p>
+                <a href="ford.html" class="cta-button">View Details</a>
+            </div>
+        </div>
+        <!-- Car 12 -->
+        <div class="car">
+            <img src="sale8.jpg" alt="Car 12">
+            <div class="car-info">
+                <h3>Audi A4</h3>
+                <p>Year: 2023</p>
+                <p>Price: $59,970</p>
+                <a href="audi.html" class="cta-button">View Details</a>
+            </div>
+        </div>
+        <!-- Add more car entries as needed -->
+    </div>
+</section>
+
+<!-- Footer section -->
+<footer class="footer-distributed">
+    <!-- Footer left content -->
+    <div class="footer-left">
+        <div><img src="" alt=""></div>
+        <p class="footer-company-name"> &copy; 2024 Cars hub</p>
+    </div>
+
+    <!-- Footer center content -->
+    <div class="footer-center">
+        <div>
             <i class="fa fa-map-marker"></i>
             <p><span>United Arab Emirates</span> Dubai</p>
-          </div>
-      
-          <div>
+        </div>
+        <div>
             <i class="fa fa-phone"></i>
             <p>00971527371</p>
-          </div>
-          
-          <div>
+        </div>
+        <div>
             <i class="fa fa-fax"></i>
             <p>00971631735</p>
-          </div>
-      
-          <div>
+        </div>
+        <div>
             <i class="fa fa-envelope"></i>
-            <p><a href="mailto:website@pittsfieldnhschools.org">Carshub.com</a></p>
-          </div>
-      
+            <p><a href="">Carshub.com</a></p>
         </div>
-      
-        <div class="footer-right">
-            <p class="footer-company-about">
-                <span>Locate Us</span>
-            </p>
-        
-            <!-- Add the following iframe for the map -->
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1dYOUR_LATITUDE_LONGITUDE!2dYOUR_LONGITUDE!3dYOUR_LATITUDE!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3AYOUR_PLACE_NAME!2sYOUR_PLACE_NAME!5e0!3m2!1sen!2sus!4vYOUR_MAP_VERSION"
-                width="500"
-                height="250"
-                style="border:0;"
-                allowfullscreen=""
-                loading="lazy"
-            ></iframe>
-            <!-- End of map iframe -->
-        </div>
-        
-        
-            
-      
-      
-      
-        </div>
-      
-      </footer>
+    </div>
 
+    <!-- Footer right content -->
+    <div class="footer-right">
+        <p class="footer-company-about">
+            <span>Locate Us</span>
+        </p>
 
+        <!-- Map iframe -->
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1dYOUR_LATITUDE_LONGITUDE!2dYOUR_LONGITUDE!3dYOUR_LATITUDE!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3AYOUR_PLACE_NAME!2sYOUR_PLACE_NAME!5e0!3m2!1sen!2sus!4vYOUR_MAP_VERSION"
+            width="500"
+            height="250"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+        ></iframe>
+        <!-- End of map iframe -->
+    </div>
+</footer>
 
-
-
-
-
-
-
-      
-
-
-      <script src="browse.js"></script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<!-- External JavaScript file -->
+<script src="browse.js"></script>
 
 
     
